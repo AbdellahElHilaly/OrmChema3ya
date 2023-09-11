@@ -2,7 +2,126 @@
 
 This library provides a simple and efficient way to work with object-relational mapping (ORM) and model-view-controller (MVC) architecture in your Java applications. With this library, you can easily perform CRUD (Create, Read, Update, Delete) operations on your models and map them to database tables.
 
-## 1. Configuration
+## 1. Set Up Databases
+To set up dependencies in your Maven project for using either MySQL or PostgreSQL, you can follow these steps:
+
+#### For MySQL:
+
+1.  Open your project's `pom.xml` file.
+    
+2.  Inside the `<dependencies>` section, add the following dependency for MySQL:
+    
+
+xmlCopy code
+
+```
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.49</version> <!-- You can use a different version if needed -->
+</dependency>
+``` 
+
+3.  Save the `pom.xml` file. Maven will automatically download and manage the MySQL JDBC driver for you.
+
+#### For PostgreSQL:
+
+1.  Open your project's `pom.xml` file.
+    
+2.  Inside the `<dependencies>` section, add the following dependency for PostgreSQL:
+    
+
+xmlCopy code
+
+```
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.2.23</version> <!-- You can use a different version if needed -->
+</dependency>
+``` 
+
+3.  Save the `pom.xml` file. Maven will automatically download and manage the PostgreSQL JDBC driver for you.
+
+By adding these dependencies to your project's `pom.xml`, you ensure that the necessary database drivers are available for connecting to MySQL or PostgreSQL, depending on your requirements. Maven will handle the download and classpath configuration for you, making it easy to work with these databases in your Java application.
+
+### download dependencies
+
+
+To run Maven from the command line, follow these steps:
+
+1.  **Open a Command Prompt (Windows) or Terminal (macOS and Linux)**:
+    
+    -   On Windows: Press `Win + R`, type `cmd`, and press Enter.
+    -   On macOS: Press `Cmd + Space`, type `Terminal`, and press Enter.
+    -   On Linux: You can usually open a terminal by pressing `Ctrl + Alt + T` or searching for "Terminal" in your applications.
+2.  **Navigate to Your Project Directory**:
+    
+    Use the `cd` (Change Directory) command to navigate to your Maven project's directory. For example:
+    
+    shellCopy code
+    
+    `cd path/to/your/project` 
+    
+    Replace `path/to/your/project` with the actual path to your Maven project directory.
+    
+3.  **Run Maven Commands**:
+    
+    You can now run Maven commands from the command line. Here are some common Maven commands:
+    
+    -   **Compile Your Project**:
+        
+        shellCopy code
+        
+        `mvn compile` 
+        
+    -   **Run Tests**:
+        
+        shellCopy code
+        
+        `mvn test` 
+        
+    -   **Package Your Project (Create a JAR, WAR, or Other Artifact)**:
+        
+        shellCopy code
+        
+        `mvn package` 
+        
+    -   **Clean Compiled Files and Target Directory**:
+        
+        shellCopy code
+        
+        `mvn clean` 
+        
+    -   **Install Your Project in the Local Repository**:
+        
+        shellCopy code
+        
+        `mvn install` 
+        
+    -   **Run a Specific Goal/Plugin (Replace `your-goal-or-plugin`)**:
+        
+        shellCopy code
+        
+        `mvn your-goal-or-plugin` 
+        
+    
+    Replace `your-goal-or-plugin` with the actual Maven goal or plugin you want to run.
+    
+4.  **Maven Wrapper (Optional)**:
+    
+    Some projects use a Maven Wrapper script (`mvnw` or `mvnw.cmd`) that allows you to run Maven without having to install it globally. If your project includes a wrapper script, you can use it instead of the `mvn` command. For example:
+    
+    shellCopy code
+    
+    `./mvnw clean install` 
+    
+    Note: The `./` is used to execute a script in the current directory (Unix-like systems).
+    
+
+That's it! You can now use Maven to build and manage your project from the command line. Be sure to replace the Maven commands with the specific goals or plugins you need for your project.
+
+## 2. Configuration
 
 ### App Configuration
 
