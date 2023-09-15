@@ -3,9 +3,6 @@ package org.example;
 
 
 
-import org.example.app.model.User;
-import org.example.app.service.impl.UserService;
-
 import java.sql.SQLException;
 
 public class App {
