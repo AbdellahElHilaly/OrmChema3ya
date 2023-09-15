@@ -1,6 +1,7 @@
 package org.example.framwork.dao.Helper;
 
-import org.example.app.shared.Helper.LogicHelper;
+
+import org.example.framwork.console.helper.LogicHelper;
 
 public class SqlHelper {
     public static String handelBoolenData(String value) {
