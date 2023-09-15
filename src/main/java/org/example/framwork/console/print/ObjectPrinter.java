@@ -1,6 +1,9 @@
 package org.example.framwork.console.print;
 
 
+import org.example.framwork.console.helper.LogicHelper;
+import org.example.framwork.console.helper.ObjectHelper;
+
 import java.lang.reflect.Field;
 import java.util.List;
 

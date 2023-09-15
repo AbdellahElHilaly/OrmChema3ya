@@ -1,4 +1,4 @@
-package org.example.framwork.console.print;
+package org.example.framwork.console.helper;
 
 import org.example.framwork.dao.Helper.PrintHelper;
 
